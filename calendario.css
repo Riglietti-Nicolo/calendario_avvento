@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
 header{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .calendario{
@@ -10,6 +27,8 @@ header{
     width: 98vh;
     grid-template-columns: repeat(7, 14vh);
     grid-template-rows: repeat(5, 10);
+    row-gap: 10px;
+    column-gap: 10px;
 }
 
 .casella{
