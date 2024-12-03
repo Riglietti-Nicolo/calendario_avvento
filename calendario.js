@@ -1,3 +1,8 @@
+// funzione per creare elementi HTML
+function createElement(obj) {
+    return document.createElement(obj);
+}
+
 // funzione per prendere elementi da classe
 function getElementsByClass(classe) {
     return document.getElementsByClassName(classe);
