@@ -30,7 +30,6 @@ header{
     row-gap: 10px;
     column-gap: 10px;
     object-fit: cover;
-
     background-image: url("assets/tux.png");
     background-position: center;
     background-repeat: no-repeat;
