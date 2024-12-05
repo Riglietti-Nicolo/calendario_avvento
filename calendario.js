@@ -8,12 +8,16 @@ function getElementsByClass(classe) {
     return document.getElementsByClassName(classe);
 }
 
-let cell = getElementsByClass('casella');
+function nCaselle(){
+    let cell = getElementsByClass('casella');
 
-for(let i = 1; i < cell.length + 1; i++){
-    cell[i - 1].innerText = i;
+    for(let i = 1; i < cell.length + 1; i++){
+        cell[i - 1].innerText = i;
+    }
 }
 
+
+// assegna un id univoco alle caselle id: giorno - mese - <anno_attuale>
 function id(){
     let anno = new Date().getFullYear();
 
@@ -33,7 +37,7 @@ function id(){
     });
 }
 
-
+// controlla il giorno attuale con la casella cliccata
 function checkDay(casella){
 
     let oggi = new Date();
@@ -43,7 +47,6 @@ function checkDay(casella){
 
     let dataCorrente = `${giorno}-${mese}-${anno}`;
 
-    
     if(dataCorrente === casella.id){
         alert("ok");
     }else{
@@ -51,7 +54,11 @@ function checkDay(casella){
     }
 }
 
-id();
 
+function main(){
 
+    nCaselle();
+    id();
+}
 
+main();
