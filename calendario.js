@@ -16,7 +16,6 @@ function nCaselle(){
     }
 }
 
-
 // assegna un id univoco alle caselle id: giorno - mese - <anno_attuale>
 function id(){
     let anno = new Date().getFullYear();
@@ -53,7 +52,6 @@ function checkDay(casella){
         alert("no");
     }
 }
-
 
 function main(){
 
