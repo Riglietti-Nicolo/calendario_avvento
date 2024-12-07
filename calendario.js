@@ -20,7 +20,7 @@ function nCaselle(){
 function id(){
     let anno = new Date().getFullYear();
 
-    let caselle = document.getElementsByClassName("casella")
+    let caselle = getElementsByClass("casella")
 
     Array.from(caselle).forEach((casella, index) => {
         let data = new Date(anno, 11, index + 1);
