@@ -42,7 +42,7 @@ function id(){
 
 // controlla il giorno attuale con la casella cliccata
 function checkDay(casella){
-
+    let nuvoletta = getQuery('.nuvoletta');
     let oggi = new Date();
     let giorno = oggi.getDate();
     let mese = oggi.getMonth();
@@ -52,6 +52,8 @@ function checkDay(casella){
 
     if(dataCorrente === casella.id){
         alert("ok");
+        nuvoletta.style.display = 'none';
+
     }else{
         showMessage('Wrong day.');
     }
