@@ -44,7 +44,6 @@ function id(){
 
 // controlla il giorno attuale con la casella cliccata
 function checkDay(casella, giornoId){
-    let nuvoletta = getQuery('.nuvoletta');
     let oggi = new Date();
     let giorno = oggi.getDate();
     let mese = oggi.getMonth();
@@ -53,7 +52,6 @@ function checkDay(casella, giornoId){
     let dataCorrente = `${giorno}-${mese}-${anno}`;
 
     if(dataCorrente === casella.id){
-        nuvoletta.style.display = 'none';
         downloadIso(casella, giornoId);
         showMessage('Cosa ci sarà?');
         delayRemoveMess(2000);
