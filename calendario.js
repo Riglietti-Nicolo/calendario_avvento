@@ -1,3 +1,4 @@
+// funzione per ottenere oggetto da querySelector
 function getQuery(oggetto) {
     return document.querySelector(oggetto);
 }
@@ -12,6 +13,7 @@ function getElementsByClass(classe) {
     return document.getElementsByClassName(classe);
 }
 
+// funzione Numera caselle
 function nCaselle(){
     let cell = getElementsByClass('casella');
 
@@ -54,14 +56,15 @@ function checkDay(casella, giornoId){
         nuvoletta.style.display = 'none';
         downloadIso(casella, giornoId);
         showMessage('Cosa ci sarà?');
-        delay(2000);
+        delayRemoveMess(2000);
 
     }else{
         showMessage(`Oggi non è il ${casella.id}`);
-        delay(2000);
+        delayRemoveMess(2000);
     }
 }
 
+// funzione mostra messaggio
 function showMessage(message) {
     let nuvoletta = getQuery('.nuvoletta');
     let testo = getQuery('.nuvoletta > p');
@@ -70,17 +73,20 @@ function showMessage(message) {
     testo.innerText = message;
 }
 
-function delay(delay) {
+// funzione delay-rimuovimessaggio
+function delayRemoveMess(delay) {
     setTimeout(() => {
         removeMessage();
     }, delay);
 }
 
+// funzione rimuovi messaggio
 function removeMessage(){
     let nuvoletta = getQuery('.nuvoletta');
     nuvoletta.style.display = 'none';
 }
 
+// funzione scarica file ISO
 function downloadIso(casella, giornoId){
     let iso = ["https://it.mirrors.cicku.me/archlinux/iso/2024.12.01/archlinux-2024.12.01-x86_64.iso", "https://www.ubuntu-it.org/download/grazie?release=latest&arch=amd64&version=desktop", "https://www.ubuntu-it.org/download/grazie?release=latest&arch=amd64&version=desktop",
         "https://linuxmint.mirror.garr.it/linuxmint/iso/stable/22/linuxmint-22-cinnamon-64bit.iso", "https://download.fedoraproject.org/pub/fedora/linux/releases/41/Silverblue/x86_64/iso/Fedora-Silverblue-ostree-x86_64-41-1.4.iso", "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.8.0-amd64-netinst.iso",
@@ -98,8 +104,8 @@ function downloadIso(casella, giornoId){
     });
 }
 
+// MAIN FUNCTION
 function main(){
-
     nCaselle();
     id();
 }
