@@ -1,3 +1,7 @@
+function getQuery(oggetto) {
+    return document.querySelector(oggetto);
+}
+
 // funzione per creare elementi HTML
 function createElement(obj) {
     return document.createElement(obj);
@@ -49,8 +53,16 @@ function checkDay(casella){
     if(dataCorrente === casella.id){
         alert("ok");
     }else{
-        alert("no");
+        showMessage('Wrong day.');
     }
+}
+
+function showMessage(message) {
+    let nuvoletta = getQuery('.nuvoletta');
+    let testo = getQuery('.nuvoletta > p');
+
+    nuvoletta.style.display = 'flex';
+    testo.innerText = message;
 }
 
 function main(){
