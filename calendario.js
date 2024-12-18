@@ -54,9 +54,11 @@ function checkDay(casella, giornoId){
         nuvoletta.style.display = 'none';
         downloadIso(casella, giornoId);
         showMessage('Cosa ci sarà?');
+        delay(2000);
 
     }else{
         showMessage(`Oggi non è il ${casella.id}`);
+        delay(2000);
     }
 }
 
@@ -66,6 +68,17 @@ function showMessage(message) {
 
     nuvoletta.style.display = 'flex';
     testo.innerText = message;
+}
+
+function delay(delay) {
+    setTimeout(() => {
+        removeMessage();
+    }, delay);
+}
+
+function removeMessage(){
+    let nuvoletta = getQuery('.nuvoletta');
+    nuvoletta.style.display = 'none';
 }
 
 function downloadIso(casella, giornoId){
