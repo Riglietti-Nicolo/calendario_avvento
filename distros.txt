@@ -1,0 +1,25 @@
+Arch
+Ubuntu
+Mint
+Fedora
+Debian
+Kali
+ZorinOS
+Garuda
+Pop!_OS
+Gentoo
+RedHat
+Manjaro
+Kubuntu
+Xubuntu
+CentOS
+VanillaOS
+Elementary
+Lubuntu
+openSUSE
+ParrotOS
+Alpine linux
+Void Linux
+Puppy Linux
+NixOS
+Artix
