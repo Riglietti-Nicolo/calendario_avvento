@@ -8,7 +8,7 @@ ZorinOS
 Garuda
 Pop!_OS
 Gentoo
-RedHat
+Slackware
 Manjaro
 Kubuntu
 Xubuntu
