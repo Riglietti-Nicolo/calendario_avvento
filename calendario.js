@@ -31,7 +31,7 @@ function id(){
     Array.from(caselle).forEach((casella, index) => {
         let data = new Date(anno, 11, index + 1);
         let giornoId = data.getDate();
-        let mese = data.getMonth();
+        let mese = data.getMonth() + 1;
         let annoCorrente = data.getFullYear();
         
         casella.id = `${giornoId}-${mese}-${annoCorrente}`;
@@ -46,16 +46,18 @@ function id(){
 function checkDay(casella, giornoId){
     let oggi = new Date();
     let giorno = oggi.getDate();
-    let mese = oggi.getMonth();
+    let mese = oggi.getMonth() + 1;
     let anno = oggi.getFullYear();
 
     let dataCorrente = `${giorno}-${mese}-${anno}`;
 
+    /*if(mese != casella.id.mese) {
+        showMessage('Torna quando sarà dicembre.');
+    } else */
     if(dataCorrente === casella.id){
         downloadIso(casella, giornoId);
         showMessage('Cosa ci sarà?');
         delayRemoveMess(2000);
-
     }else{
         showMessage(`Oggi non è il ${casella.id}`);
         delayRemoveMess(2000);
